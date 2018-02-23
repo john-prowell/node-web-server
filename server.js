@@ -21,6 +21,7 @@ app.use((req, res, next) => {
   next();
 });
 
+// To put into maintenance mode
 // app.use((req, res) => {
 //   res.render('maintenance.hbs');
 // });
@@ -45,6 +46,12 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Project Page'
   });
 });
 
